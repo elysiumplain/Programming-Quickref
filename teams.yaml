@@ -1,0 +1,21 @@
+frontend:                         # Name of the Team
+  contributors:                   # Array of contributors by email address
+    - elysiumplain@netscape.net
+    - connor.neuhaus.design@gmail.com
+  reviews:                        # Configuration for selecting PR reviewers  
+    strategy: least_busy          # Reverse sort by # of open PR's they are reviewing
+    select: 1                     # and select the top n contributors
+backend:
+  contributors:
+    - elysiumplain@netscape.net
+    - connor.neuhaus.design@gmail.com
+  reviews:
+    strategy: random              # Randomly sort all users 
+    select: 1                     # and select the top n
+seniors:
+  contributors:
+    - elysiumplain@netscape.net
+    - connor.neuhaus.design@gmail.com
+  reviews:
+    strategy: all                # Select all users, no filtering/sorting applied
+                                 # No `select` argument required; ignored if specified
